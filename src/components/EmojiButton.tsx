@@ -60,5 +60,4 @@ export default function EmojiButton () : JSX.Element {
         </>
 
     )
-
 }
