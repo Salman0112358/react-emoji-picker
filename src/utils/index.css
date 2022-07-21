@@ -1,26 +1,21 @@
 #welcome-msg {
-    text-align: center;
-    
+  text-align: center;
 }
 
 #welcome-section {
-    background-color: coral;
-    border-style:double;
-    
+  background-color: coral;
+  border-style: double;
 }
 
 body {
-
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .emoji-btn {
-    margin-top: 20px;
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    
+  margin-top: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
