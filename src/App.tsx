@@ -1,5 +1,6 @@
 import EmojiButton from "./components/EmojiButton";
 import PageFooter from "./components/PageFooter";
+import { useState } from "react";
 
 
 function App(): JSX.Element {
@@ -8,25 +9,8 @@ function App(): JSX.Element {
     <PageFooter/>
     <main>
       <section>
-      <EmojiButton
-      emojiString="🐋 "/>
-      <EmojiButton
-      emojiString="☕"/>
-      <EmojiButton
-      emojiString="🐶"/>
-      <EmojiButton
-      emojiString="🦄"/>
-      <EmojiButton
-      emojiString="🐐"/>
+        <EmojiButton/>
       </section>
-      <section>
-        <h2>Current Emoji: </h2>
-        <h2>Previous Emoji: </h2>
-        <h2>Previous 2 Emojis: </h2>
-      </section>
-
-
-
     </main>
     </>
 
