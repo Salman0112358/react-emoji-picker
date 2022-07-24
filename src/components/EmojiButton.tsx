@@ -1,47 +1,41 @@
 import { useState } from "react";
-const emojiArray: string[] = [];
 
 export default function EmojiButton(): JSX.Element {
-  const [currentEmoji, nextEmoji] = useState("No Emoji has been chosen so far");
-  const [PreviousEmoji, nextPreviousEmoji] = useState(
-    "No Emojis have been chosen so far"
-  );
-
-  const [currentArray, nextArray] = useState<string[]>(emojiArray);
+  const [currentEmoji, nextEmoji] = useState("");
+  const [PreviousEmoji, nextPreviousEmoji] = useState("");
+  const [currentArray, nextArray] = useState<string[]>([currentEmoji]);
 
   const whaleEmoji = () => {
     nextPreviousEmoji(currentEmoji);
     nextEmoji("🐋");
-    emojiArray.push("🐋");
-    nextArray(emojiArray);
+    nextArray([...currentArray,currentEmoji])
+    
   };
   const coffeeEmoji = () => {
     nextPreviousEmoji(currentEmoji);
     nextEmoji("☕");
-    emojiArray.push("☕");
-    nextArray(emojiArray);
+    nextArray([...currentArray,currentEmoji])
+
   };
   const dogEmoji = () => {
     nextPreviousEmoji(currentEmoji);
     nextEmoji("🐶");
-    emojiArray.push("🐶");
-    nextArray(emojiArray);
+    nextArray([...currentArray,currentEmoji])
+
   };
   const unicornEmoji = () => {
     nextPreviousEmoji(currentEmoji);
     nextEmoji("🦄");
-    emojiArray.push("🦄");
-    nextArray(emojiArray);
+    nextArray([...currentArray,currentEmoji])
+ 
   };
   const goatEmoji = () => {
     nextPreviousEmoji(currentEmoji);
     nextEmoji("🐐");
-    emojiArray.push("🐐");
-    nextArray(emojiArray);
+    nextArray([...currentArray,currentEmoji])
+
   };
 
-  console.log(emojiArray);
-  console.log(`${currentArray} this is the previous array `);
 
   return (
     <>
@@ -63,9 +57,8 @@ export default function EmojiButton(): JSX.Element {
       <section>
         <h2>Current Emoji: {currentEmoji}</h2>
         <h2>Previous Emoji: {PreviousEmoji} </h2>
-        <h2>
-          Previous 2 Emojis: {PreviousEmoji}, {currentEmoji}{" "}
-        </h2>
+        <h2>Previous 2 Emojis: {PreviousEmoji} {currentEmoji}</h2>
+        <h2>Previous 5 Emojis: {currentArray.slice(0,7)}</h2>
         <h2>Previous Emojis: {currentArray} </h2>
       </section>
     </>
