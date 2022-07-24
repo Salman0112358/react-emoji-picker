@@ -58,7 +58,7 @@ export default function EmojiButton(): JSX.Element {
         <h2>Current Emoji: {currentEmoji}</h2>
         <h2>Previous Emoji: {PreviousEmoji} </h2>
         <h2>Previous 2 Emojis: {PreviousEmoji} {currentEmoji}</h2>
-        <h2>Previous 5 Emojis: {currentArray.slice(0,7)}</h2>
+        <h2>Previous 5 Emojis: {currentArray.slice(currentArray.length-5,currentArray.length)}</h2>
         <h2>Previous Emojis: {currentArray} </h2>
       </section>
     </>
